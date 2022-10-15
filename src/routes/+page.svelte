@@ -2,7 +2,7 @@
   let muted = true;
   let hidden = true;
   let paused = true;
-  const numVids = 27;
+  const numVids = 26;
   let index = 0;
   let vids = shuffle(createArray(numVids));
   console.log(vids);
