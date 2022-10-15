@@ -93,13 +93,13 @@
 <a
   target="_blank"
   rel="noopener"
-  class="border-t border-l border-slate-600 rounded-tl text-gray-400 tracking-widest fixed right-0 bottom-0 flex flex-row items-center"
+  class="border-t border-l border-slate-600 rounded-tl text-gray-400 tracking-tighter sm:tracking-widest fixed right-0 bottom-0 flex flex-row items-center"
   href="https://connorcallahan.info"
 >
   <img
-    class="rounded-full h-8 m-2"
+    class="rounded-full h-6 sm:h-8 m-2"
     src="https://cowhca.github.io/assets/profile_pic.png"
     alt="Me smiling"
   />
-  <p class="text-sm pr-1">by Connor Callahan</p>
+  <p class="hidden sm:block text-sm pr-1">by Connor Callahan</p>
 </a>
