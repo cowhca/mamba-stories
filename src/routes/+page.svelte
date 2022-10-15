@@ -68,7 +68,7 @@
     Inspire
   </p>
 </div>
-{#key vidSrc}
+{#key index}
   <video
     class="h-[70vh] w-auto mx-auto"
     bind:paused
@@ -82,13 +82,6 @@
     <track kind="captions" />
   </video>
 {/key}
-<!-- <a
-  href="https://connorcallahan.info"
-  class="fixed text-white bottom-0 right-0 p-2 bg-slate-800 rounded-tl-md"
->
-  <img src="https://cowhca.github.io/assets/profile_pic.png" alt="profile" />
-  by Connor Callahan
-</a> -->
 
 <a
   target="_blank"
