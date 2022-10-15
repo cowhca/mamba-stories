@@ -39,11 +39,11 @@
 </script>
 
 <h1
-  class="text-5xl text-center rounded-sm bg-laker-gold text-laker-purple font-bold w-1/3 mx-auto p-2 mt-8"
+  class="text-2xl sm:text-5xl text-center rounded-sm bg-laker-gold text-laker-purple font-bold w-2/3 sm:w-1/3 mx-auto p-2 mt-8"
 >
   Mamba Stories
 </h1>
-<h2 class="text-xl text-white text-center my-4">
+<h2 class="text-md sm:text-xl text-white text-center my-4">
   Inspiration from stories about the Kobe Bryant
 </h2>
 
