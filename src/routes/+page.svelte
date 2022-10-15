@@ -2,6 +2,12 @@
   let muted = true;
   let hidden = true;
   let paused = true;
+  const numVids = 27;
+  let index = 0;
+  let vids = shuffle(createArray(numVids));
+  console.log(vids);
+  $: vidSrc = `https://cowhca.github.io/mamba-stories/vid${vids[index]}.mp4`;
+  let start = true;
 
   function createArray(n) {
     let toReturn = [];
@@ -10,12 +16,6 @@
     }
     return toReturn;
   }
-
-  let vids = shuffle(createArray(27));
-  console.log(vids);
-  let index = 0;
-  let showStartButton = true;
-  $: vidSrc = `https://cowhca.github.io/mamba-stories/vid${vids[index]}.mp4`;
 
   function shuffle(array) {
     let currentIndex = array.length,
@@ -44,34 +44,28 @@
   Mamba Stories
 </h1>
 <h2 class="text-xl text-white text-center my-4">
-  Gain inspiration from stories about the Black Mamba
+  Inspiration from stories about the Kobe Bryant
 </h2>
 
 <!-- svelte-ignore a11y-click-events-have-key-events -->
 <div class="flex justify-center">
   <p
-    id="start"
+    id="inspire"
     on:click={() => {
-      muted = false;
-      hidden = false;
-      paused = false;
-      showStartButton = false;
-    }}
-    class="text-2xl text-black cursor-pointer hover:shadow-[4px_4px_0px_0px_rgba(34,197,94,0.3)] p-2 bg-green-500 inline rounded-md"
-    class:hidden={!showStartButton}
-  >
-    Start
-  </p>
-  <p
-    on:click={() => {
-      muted = true;
-      index++;
-      muted = false;
+      if (start) {
+        muted = false;
+        hidden = false;
+        paused = false;
+        start = false;
+      } else {
+        muted = true;
+        index = (index + 1) % numVids;
+        muted = false;
+      }
     }}
     class="text-2xl text-black cursor-pointer hover:shadow-[4px_4px_0px_0px_rgba(34,197,94,0.3)] p-2 bg-green-500 inline rounded-md mb-2"
-    class:hidden={showStartButton}
   >
-    Random
+    Inspire
   </p>
 </div>
 {#key vidSrc}
