@@ -2,10 +2,9 @@
   let muted = true;
   let hidden = true;
   let paused = true;
-  const numVids = 26;
+  const numVids = 27;
   let index = 0;
   let vids = shuffle(createArray(numVids));
-  console.log(vids);
   $: vidSrc = `https://cowhca.github.io/mamba-stories/vid${vids[index]}.mp4`;
   let start = true;
 
@@ -70,7 +69,7 @@
 </div>
 {#key index}
   <video
-    class="h-[70vh] w-auto mx-auto"
+    class="h-[66vh] w-auto mx-auto"
     bind:paused
     class:hidden
     autoplay
@@ -82,6 +81,15 @@
     <track kind="captions" />
   </video>
 {/key}
+<div class="flex justify-center">
+  <a
+    href="https://airtable.com/shrx40o3EsuIEx9Ke"
+    target="_blank"
+    class:hidden
+    class="bg-slate-500 p-2 rounded-md m-2 hover:shadow-[4px_4px_0px_0px_rgba(100,116,139,0.3)]"
+    >Suggest</a
+  >
+</div>
 
 <a
   target="_blank"
